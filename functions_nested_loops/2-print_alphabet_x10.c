@@ -1,13 +1,13 @@
 #include "main.h"
 /**
- * print_alphabet_10x - a function to print the
+ * print_alphabet_x10 - a function to print the
  * alphabet
  * Description: simple alphabet function
  * a counter to perform the
  * function 10 times
  */
 
-void print_alphabet_10x(void)
+void print_alphabet_x10(void)
 {
 	char letter;
 	int count;
@@ -17,7 +17,6 @@ void print_alphabet_10x(void)
 	if (count <= '9')
 	{
 		count = count + 1;
-	
 	while (letter <= 'z')
 		{
 		_putchar(letter);
