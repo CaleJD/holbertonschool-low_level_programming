@@ -13,14 +13,19 @@ void print_alphabet_x10(void)
 	int count;
 
 	letter = 'a';
-	count = '0';
-	while (count <= '9')
+	count = 0;
+	while (count <= 9)
 	{
 		count = count + 1;
-		while (letter <= 'z')
+		while (letter < 'z')
 		{
 			_putchar(letter);
 			letter = letter + 1;
+		}
+		while (letter == 'z')
+		{
+			_putchar(letter);
+			letter = 'a';
 		}
 	}
 	_putchar('\n');
