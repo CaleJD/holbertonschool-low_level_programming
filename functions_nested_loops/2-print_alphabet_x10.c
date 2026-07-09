@@ -14,7 +14,7 @@ void print_alphabet_10x(void)
 
 	letter = 'a';
 	count = '0';
-	while (count <= '9')
+	if (count <= '9')
 	{
 		count = count + 1;
 	
