@@ -12,13 +12,13 @@ int main(void)
 	char let;
 
 	num = '0';
-	let = 'A';
+	let = 'a';
 	while (num <= '9')
 	{
 		putchar(num);
 		num = num + 1;
 	}
-	while (let <= 'F')
+	while (let <= 'f')
 	{
 		putchar(let);
 		let = let + 1;
