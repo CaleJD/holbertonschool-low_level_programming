@@ -5,8 +5,11 @@
 * @a: value to swap with b
 * @b: value to swap with a
 */
-void swap_int(int *a, int *b);
+void swap_int(int *a, int *b)
 {
-	*a = (b);
-	*b = (a);
+	int temp;
+
+	temp = *a;
+	*a = *b;
+	*b = temp;
 }
