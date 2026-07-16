@@ -4,7 +4,7 @@
 * _puts - prints out every 2nd letter of a string
 * @str: string to print
 */
-void _puts2(char *str)
+void puts2(char *str)
 {
         int currentLet;
 
