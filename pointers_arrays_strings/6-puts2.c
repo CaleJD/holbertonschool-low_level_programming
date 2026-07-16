@@ -9,6 +9,7 @@ void _puts2(char *str)
         int currentLet;
 
         currentLet = 0;
+	currentLet++;
         while (str[currentLet] != '\0')
         {
                 _putchar(str[currentLet]);
