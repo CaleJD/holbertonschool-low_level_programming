@@ -9,9 +9,9 @@ void print_rev(char *s)
 	int currentLet;
 
 	currentLet = '\0';
-	while (str[currentLet] >= 0)
+	while (s[currentLet] >= 0)
 	{
-		_putchar(str[currentLet]);
+		_putchar(s[currentLet]);
 		currentLet--;
 	}
 	_putchar('\n');
