@@ -58,13 +58,10 @@ int addition(int a, int b)
 
 /**
 * main - A simple Calculator
-*
+* @a: First digit
+* @b: Second digit
 * Return: 0
 */
-int subtract(int a, int b);
-int addition(int a, int b);
-int multiply(int a, int b);
-int divide(int a, int b);
 int main(void)
 {
 	int choice;
@@ -82,7 +79,11 @@ int main(void)
 		printf("4) Divide\n");
 		printf("0) Quit\n");
 		printf("Choice: ");
-		scanf("%d", &choice);
+		if (scanf("%d", &choice) != 1)
+		{
+			printf("Invalid choice\n");
+			return (1);
+		}
 		if (choice < 0 || choice > 4)
 		{
 			printf("Invalid choice\n");
@@ -90,36 +91,68 @@ int main(void)
 		if (choice == 1)
 		{
 			printf("First number: ");
-			scanf("%d", &a);
+			if (scanf("%d", &a) != 1)
+			{
+				printf("Invalid number\n");
+				return (1);
+			}
 			printf("Second number: ");
-			scanf("%d", &b);
+			if (scanf("%d", &b) != 1)
+			{
+				printf("Invalid number\n");
+				return (1);
+			}
 			result = addition(a, b);
 			printf("Result: %d\n", result);
 		}
 		if (choice == 2)
 		{
 			printf("First number: ");
-			scanf("%d", &a);
+			if (scanf("%d", &a) != 1)
+			{
+				printf("Invalid number\n");
+				return (1);
+			}
 			printf("Second number: ");
-			scanf("%d", &b);
+			if (scanf("%d", &b) != 1)
+			{
+				printf("Invalid number\n");
+				return (1);
+			}
 			result = subtract(a, b);
 			printf("Result: %d\n", result);
 		}
 		if (choice == 3)
 		{
 			printf("First number: ");
-			scanf("%d", &a);
+			if (scanf("%d", &a) != 1)
+			{
+				printf("Invalid choice\n");
+				return (1);
+			}
 			printf("Second number: ");
-			scanf("%d", &b);
+			if (scanf("%d", &b) != 1)
+			{
+				printf("Invalid choice\n");
+				return (1);
+			}
 			result = multiply(a, b);
 			printf("Result: %d\n", result);
 		}
 		if (choice == 4)
 		{
 			printf("First number: ");
-			scanf("%d", &a);
+			if (scanf("%d", &a) != 1)
+			{
+				printf("Invalid choice\n");
+				return (1);
+			}
 			printf("Second number: ");
-			scanf("%d", &b);
+			if (scanf("%d", &b) != 1)
+			{
+				printf("Invalid choice\n");
+				return (1);
+			}
 			if (b == 0)
 			{
 				printf("Error: division by zero\n");
