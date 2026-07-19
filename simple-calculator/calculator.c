@@ -1,65 +1,51 @@
 #include <stdio.h>
 
 /**
-* multiply - Multiply a and b
-* @a: First number
-* @b: Second number
-* Return: The multiplied outcome
-*/
-int multiply(int a, int b)
+ * calculate - Performs the selected operation
+ * @choice: Menu choice
+ * @a: First number
+ * @b: Second number
+ * Return: The result.
+ */
+void calculate(int choice, int a, int b)
 {
-	int result;
-
-	result = (a * b);
-	return (result);
+	if (choice == 1)
+		return (a + b);
+	else if (choice == 2)
+		return (a - b);
+	else if (choice == 3)
+		return (a * b);
+	else if (b == 0)
+		printf("Error: division by zero\n");
+	else
+		printf("Result: %d\n", a / b);
 }
 
 /**
-* divide - Divide b from a
-* @a: First number
-* @b: Second number
-* Return: The divided outcome
+* read_numbers - Reads the 2 numbers from the user
+* @a: Pointer to 1st number
+* @b: Pointer to 2nd letter
 */
-int divide(int a, int b)
+void read_numbers(int *a, int *b)
 {
-	int result;
-
-	result = (a / b);
-	return (result);
-}
-
-/**
-* subtract - Subtract b from a
-* @a: First number
-* @b: Second number
-* Return: The subtracted outcome
-*/
-int subtract(int a, int b)
-{
-	int result;
-
-	result = (a - b);
-	return (result);
-}
-
-/**
-* addition - Adds a and b together
-* @a: First number
-* @b: Second number
-* Return: sum of a and b
-*/
-int addition(int a, int b)
-{
-	int result;
-
-	result = (a + b);
-	return (result);
+	printf("First number: ");
+	if (scanf("%d", a) != 1)
+	{
+		printf("Invalid number\n");
+		return (0);
+	}
+	printf("Second number: ");
+	if (scanf(%d, b) != 1)
+	{
+		printf("Invalid number\n");
+		return (0);
+	}
+	return (1);
 }
 
 /**
 * main - A simple Calculator
-* a: First digit
-* b: Second digit
+* 
 * Return: 0
 */
 int main(void)
@@ -67,7 +53,6 @@ int main(void)
 	int choice;
 	int a;
 	int b;
-	int result;
 
 	choice = -1;
 	while (choice != 0)
@@ -84,53 +69,12 @@ int main(void)
 		{
 			printf("Invalid choice\n");
 		}
-		if (choice == 1)
+		else if (choice > 0)
 		{
-			printf("First number: ");
-			scanf("%d", &a);
-			printf("Second number: ");
-			scanf("%d", &b);
-			result = addition(a, b);
-			printf("Result: %d\n", result);
-		}
-		if (choice == 2)
-		{
-			printf("First number: ");
-			scanf("%d", &a);
-			printf("Second number: ");
-			scanf("%d", &b);
-			result = subtract(a, b);
-			printf("Result: %d\n", result);
-		}
-		if (choice == 3)
-		{
-			printf("First number: ");
-			scanf("%d", &a);
-			printf("Second number: ");
-			scanf("%d", &b);
-			result = multiply(a, b);
-			printf("Result: %d\n", result);
-		}
-		if (choice == 4)
-		{
-			printf("First number: ");
-			scanf("%d", &a);
-			printf("Second number: ");
-			scanf("%d", &b);
-			if (b == 0)
-			{
-				printf("Error: division by zero\n");
-			}
-			else
-			{
-				result = divide(a, b);
-				printf("Result: %d\n", result);
-			}
+			if (readnumbers(&a, &b) == 1)
+			calculate(choice, a, b);
 		}
 	}
-	if (choice == 0)
-	{
-		printf("Bye!\n");
-	}
+	printf("Bye!\n");
 	return (0);
 }
