@@ -91,68 +91,36 @@ int main(void)
 		if (choice == 1)
 		{
 			printf("First number: ");
-			if (scanf("%d", &a) != 1)
-			{
-				printf("Invalid number\n");
-				return (1);
-			}
+			scanf("%d", &a);
 			printf("Second number: ");
-			if (scanf("%d", &b) != 1)
-			{
-				printf("Invalid number\n");
-				return (1);
-			}
+			scanf("%d", &b);
 			result = addition(a, b);
 			printf("Result: %d\n", result);
 		}
 		if (choice == 2)
 		{
 			printf("First number: ");
-			if (scanf("%d", &a) != 1)
-			{
-				printf("Invalid number\n");
-				return (1);
-			}
+			scanf("%d", &a);
 			printf("Second number: ");
-			if (scanf("%d", &b) != 1)
-			{
-				printf("Invalid number\n");
-				return (1);
-			}
+			scanf("%d", &b);
 			result = subtract(a, b);
 			printf("Result: %d\n", result);
 		}
 		if (choice == 3)
 		{
 			printf("First number: ");
-			if (scanf("%d", &a) != 1)
-			{
-				printf("Invalid choice\n");
-				return (1);
-			}
+			scanf("%d", &a);
 			printf("Second number: ");
-			if (scanf("%d", &b) != 1)
-			{
-				printf("Invalid choice\n");
-				return (1);
-			}
+			scanf("%d", &b);
 			result = multiply(a, b);
 			printf("Result: %d\n", result);
 		}
 		if (choice == 4)
 		{
 			printf("First number: ");
-			if (scanf("%d", &a) != 1)
-			{
-				printf("Invalid choice\n");
-				return (1);
-			}
+			scanf("%d", &a);
 			printf("Second number: ");
-			if (scanf("%d", &b) != 1)
-			{
-				printf("Invalid choice\n");
-				return (1);
-			}
+			scanf("%d", &b);
 			if (b == 0)
 			{
 				printf("Error: division by zero\n");
