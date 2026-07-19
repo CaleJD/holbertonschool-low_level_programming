@@ -103,7 +103,7 @@ int main(void)
 		result = subtract(a, b);
 		printf("Result: %d\n", result);
 	}
-	if choice == 3)
+	if (choice == 3)
 	{
 		printf("First number: ");
 		scanf("%d", &a);
@@ -112,14 +112,21 @@ int main(void)
 		result = multiply(a, b);
 		printf("Result: %d\n", result);
 	}
-	if choice == 4)
+	if (choice == 4)
 	{
 		printf("First number: ");
 		scanf("%d", &a);
 		printf("Second number: ");
 		scanf("%d", &b);
-		result = divide(a, b);
-		printf("Result: %d\n", result);
+		if (a == 0 || b == 0);
+		{
+			printf("Error: division by zero\n");
+		}
+		else
+		{
+			result = divide(a, b);
+			printf("Result: %d\n", result);
+		}
 	}
 	if (choice == 0)
 	{
