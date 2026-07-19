@@ -1,6 +1,20 @@
 #include <stdio.h>
 
 /**
+* subtract - Subtract a from b
+* @a: First number
+* @b: Second number
+* Return: The subtracted outcome
+*/
+int subtract(int a, int b)
+{
+	int result;
+
+	result = (a - b);
+	return (result);
+}
+
+/**
 * addition - Adds 2 numbers together
 * @a: First number
 * @b: Second number
@@ -20,6 +34,7 @@ int addition(int a, int b)
 * @b: Second number
 * Return: 0
 */
+int subtract(int a, int b);
 int addition(int a, int b);
 int main(void)
 {
@@ -47,6 +62,15 @@ int main(void)
 		printf("Second number: ");
 		scanf("%d", &b);
 		result = addition(a, b);
+		printf("Result: %d\n", result);
+	}
+	if (choice == 2)
+	{
+		printf("First number: ");
+		scanf("%d", &a);
+		printf("Second number: ");
+		scanf("%d", &b);
+		result = subtract(a, b);
 		printf("Result: %d\n", result);
 	}
 	if (choice == 0)
