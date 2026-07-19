@@ -10,11 +10,11 @@
 void calculate(int choice, int a, int b)
 {
 	if (choice == 1)
-		return (a + b);
+		printf("Result: %d\n", a + b);
 	else if (choice == 2)
-		return (a - b);
+		printf("Result: %d\n", a - b);
 	else if (choice == 3)
-		return (a * b);
+		printf("Result: %d\n", a * b);
 	else if (b == 0)
 		printf("Error: division by zero\n");
 	else
@@ -25,8 +25,9 @@ void calculate(int choice, int a, int b)
 * read_numbers - Reads the 2 numbers from the user
 * @a: Pointer to 1st number
 * @b: Pointer to 2nd letter
+* Return: 1 on success, 0 on invalid.
 */
-void read_numbers(int *a, int *b)
+int read_numbers(int *a, int *b)
 {
 	printf("First number: ");
 	if (scanf("%d", a) != 1)
@@ -71,8 +72,10 @@ int main(void)
 		}
 		else if (choice > 0)
 		{
-			if (readnumbers(&a, &b) == 1)
+			if (read_numbers(&a, &b) == 1)
+			{
 			calculate(choice, a, b);
+			}
 		}
 	}
 	printf("Bye!\n");
