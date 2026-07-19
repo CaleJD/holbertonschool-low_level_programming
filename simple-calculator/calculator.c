@@ -65,8 +65,12 @@ int main(void)
 		printf("4) Divide\n");
 		printf("0) Quit\n");
 		printf("Choice: ");
-		scanf("%d", &choice);
-		if (choice < 0 || choice > 4)
+		if (scanf("%d", &choice) != 1)
+		{
+			printf("Invalid choice\n");
+			return (1);
+		}
+		else if (choice < 0 || choice > 4)
 		{
 			printf("Invalid choice\n");
 		}
