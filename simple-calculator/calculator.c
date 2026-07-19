@@ -1,6 +1,34 @@
 #include <stdio.h>
 
 /**
+* multiply - Multiply a and b
+* @a: First number
+* @b: Second number
+* Return: The multiplied outcome
+*/
+int multiply(int a, int b)
+{
+	int result;
+
+	result = (a * b);
+	return (result);
+}
+
+/**
+* divide - divide a from b
+* @a: First number
+* @b: Second number
+* Return: The divided outcome
+*/
+int divide(int a, int b)
+{
+	int result;
+
+	result = (a / b);
+	return (result);
+}
+
+/**
 * subtract - Subtract a from b
 * @a: First number
 * @b: Second number
@@ -15,7 +43,7 @@ int subtract(int a, int b)
 }
 
 /**
-* addition - Adds 2 numbers together
+* addition - Adds a and b together
 * @a: First number
 * @b: Second number
 * Return: sum of a and b
@@ -36,6 +64,8 @@ int addition(int a, int b)
 */
 int subtract(int a, int b);
 int addition(int a, int b);
+int multiply(int a, int b);
+int divide(int a, int b);
 int main(void)
 {
 	int choice;
@@ -71,6 +101,24 @@ int main(void)
 		printf("Second number: ");
 		scanf("%d", &b);
 		result = subtract(a, b);
+		printf("Result: %d\n", result);
+	}
+	if choice == 3)
+	{
+		printf("First number: ");
+		scanf("%d", &a);
+		printf("Second number: ");
+		scanf("%d", &b);
+		result = multiply(a, b);
+		printf("Result: %d\n", result);
+	}
+	if choice == 4)
+	{
+		printf("First number: ");
+		scanf("%d", &a);
+		printf("Second number: ");
+		scanf("%d", &b);
+		result = divide(a, b);
 		printf("Result: %d\n", result);
 	}
 	if (choice == 0)
