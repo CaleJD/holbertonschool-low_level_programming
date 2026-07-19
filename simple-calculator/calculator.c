@@ -35,7 +35,7 @@ void read_numbers(int *a, int *b)
 		return (0);
 	}
 	printf("Second number: ");
-	if (scanf(%d, b) != 1)
+	if (scanf("%d", b) != 1)
 	{
 		printf("Invalid number\n");
 		return (0);
@@ -45,7 +45,7 @@ void read_numbers(int *a, int *b)
 
 /**
 * main - A simple Calculator
-* 
+*
 * Return: 0
 */
 int main(void)
