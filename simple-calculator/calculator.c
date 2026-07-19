@@ -58,8 +58,8 @@ int addition(int a, int b)
 
 /**
 * main - A simple Calculator
-* @a: First digit
-* @b: Second digit
+* a: First digit
+* b: Second digit
 * Return: 0
 */
 int main(void)
@@ -79,11 +79,7 @@ int main(void)
 		printf("4) Divide\n");
 		printf("0) Quit\n");
 		printf("Choice: ");
-		if (scanf("%d", &choice) != 1)
-		{
-			printf("Invalid choice\n");
-			return (1);
-		}
+		scanf("%d", &choice);
 		if (choice < 0 || choice > 4)
 		{
 			printf("Invalid choice\n");
