@@ -7,9 +7,16 @@
 void puts2(char *str)
 {
 	int currentLet;
+	int length;
+	
+	length = 0;
+	while (str[length] != '\0')
+	{
+		length++;
+	}
 
 	currentLet = 0;
-	while (str[currentLet] != '\0')
+	while (currentLet < length)
 	{
 		_putchar(str[currentLet]);
 		currentLet += 2;
