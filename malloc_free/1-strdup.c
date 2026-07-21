@@ -11,18 +11,24 @@ char *_strdup(char *str)
 {
 	char *new_str;
 	unsigned int index;
+	unsigned int size;
 
 	if (str == 0)
 	{
 		return (NULL);
 	}
-	new_str = malloc(sizeof(str));
+	size = 0;
+	while (str[size] != '\0')
+	{
+		size++;
+	}
+	new_str = malloc(sizeof(char) * (size + 1));
 	if (new_str == NULL)
 	{
 		return (NULL);
 	}
 	index = 0;
-	while (str[index])
+	while (index < size)
 	{
 		new_str[index] = str[index];
 		index++;
