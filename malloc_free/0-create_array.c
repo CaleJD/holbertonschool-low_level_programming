@@ -4,6 +4,8 @@
 /**
 * create_array - creates an array of chars and
 * initialises it with a specific char.
+* @size: the size of the array
+* @c: The current char
 * Return: NULL if size of array is 0.
 */
 char *create_array(unsigned int size, char c)
@@ -26,4 +28,5 @@ char *create_array(unsigned int size, char c)
 		array[index] = c;
 		index++;
 	}
+	return (array);
 }
