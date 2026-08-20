@@ -4,11 +4,11 @@
  * _print_rev_recursion - Prints a string followed by a new line
  * @s: String to print
  */
- void _print_rev_recursion(char *s)
- {
+void _print_rev_recursion(char *s)
+{
 	if (*s == '\0')
 		return;
-	
+
 	_print_rev_recursion(s + 1);
 	_putchar(*s);
 }
