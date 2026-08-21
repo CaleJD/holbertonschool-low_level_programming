@@ -38,14 +38,12 @@ int copy_file(const char *source, const char *destination)
 	source_fd = open(source, O_RDONLY);
 	if (source_fd == -1)
 		return (98);
-
 	destination_fd = open(destination, O_WRONLY | O_CREAT | O_TRUNC, 0664);
 	if (destination_fd == -1)
 	{
 		close(source_fd);
 		return (99);
 	}
-
 	while ((bytes_read = read(source_fd, buffer, 1024)) > 0)
 	{
 		bytes_written = write(destination_fd, buffer, bytes_read);
@@ -56,20 +54,16 @@ int copy_file(const char *source, const char *destination)
 			return (99);
 		}
 	}
-
 	if (bytes_read == -1)
 	{
 		close(source_fd);
 		close(destination_fd);
 		return (98);
 	}
-
 	if (close_file(source_fd) == -1)
 		return (100);
-
 	if (close_file(destination_fd) == -1)
 		return (100);
-
 	return (0);
 }
 
@@ -89,7 +83,6 @@ int main(int argc, char *argv[])
 		dprintf(STDERR_FILENO, "Usage: cp file_from file_to\n");
 		return (97);
 	}
-
 	result = copy_file(argv[1], argv[2]);
 	if (result == 98)
 		dprintf(STDERR_FILENO,
@@ -97,6 +90,5 @@ int main(int argc, char *argv[])
 	else if (result == 99)
 		dprintf(STDERR_FILENO,
 			"Error: Can't write to %s\n", argv[2]);
-
 	return (result);
 }
