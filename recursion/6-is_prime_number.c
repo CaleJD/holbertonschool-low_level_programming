@@ -3,7 +3,7 @@
 /**
  * check_prime - Checks whether n has a divisor
  * @n: Number being checked
- * @divisor: Current divisor
+ * @division: Current divisor
  *
  * Return: 1 if prime, otherwise 0
  */
