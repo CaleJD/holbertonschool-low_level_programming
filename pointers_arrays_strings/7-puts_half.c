@@ -1,9 +1,9 @@
 #include "main.h"
 
 /**
-* puts_half - prints out half a string
-* @str: string to print
-*/
+ * puts_half - Prints out second half of a string.
+ * @str: String to print.
+ */
 void puts_half(char *str)
 {
 	int currentLet;
@@ -22,11 +22,11 @@ void puts_half(char *str)
 		currentLet = isOdd;
 		currentLet++;
 	}
-	else 
+	else
 	{
 		currentLet = length / 2;
 	}
-	
+
 	while (str[currentLet] != '\0')
 	{
 		_putchar(str[currentLet]);
