@@ -24,6 +24,7 @@ void puts_half(char *str)
 	else 
 	{
 		currentLet = length / 2;
+		currentLet++;
 	}
 	
 	while (str[currentLet] != '\0')
