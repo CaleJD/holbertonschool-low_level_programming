@@ -8,15 +8,25 @@ void puts_half(char *str)
 {
 	int currentLet;
 	int length;
+	int isOdd;
 
 	length = 0;
+	isOdd = 0;
 	while (str[length] != '\0')
 	{
 		length++;
 	}
-	length = length / 2;
-	length++;
-	currentLet = 0;
+	if (length % 2 != 0)
+	{
+		isOdd = length / 2;
+		currentLet = isOdd;
+	}
+	else 
+	{
+		length = length / 2;
+		currentLet = 0;
+	}
+	
 	while (currentLet < length)
 	{
 		_putchar(str[currentLet]);
