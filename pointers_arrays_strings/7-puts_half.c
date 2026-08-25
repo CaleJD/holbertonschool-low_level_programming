@@ -23,8 +23,7 @@ void puts_half(char *str)
 	}
 	else 
 	{
-		length = length / 2;
-		currentLet = 0;
+		currentLet = length / 2;
 	}
 	
 	while (currentLet < length)
