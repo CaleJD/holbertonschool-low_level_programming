@@ -20,11 +20,11 @@ void puts_half(char *str)
 	{
 		isOdd = length / 2;
 		currentLet = isOdd;
+		currentLet++;
 	}
 	else 
 	{
 		currentLet = length / 2;
-		currentLet++;
 	}
 	
 	while (str[currentLet] != '\0')
