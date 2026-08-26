@@ -24,14 +24,15 @@ int _atoi(char *s)
 		else if (s[i] >= '0' && s[i] <= '9')
 		{
 			start = 1;
-			newInt = newInt * 10 + (s[i] - '0');
+			/* Keep the value negative so INT_MIN does not overflow. */
+			newInt = newInt * 10 - (s[i] - '0');
 		}
 		else if (start == 1)
 			break;
 		i++;
 	}
 
-	if (neg % 2 != 0)
+	if (neg % 2 == 0)
 		newInt = -newInt;
 
 	return (newInt);
