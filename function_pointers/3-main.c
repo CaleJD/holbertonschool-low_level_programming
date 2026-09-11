@@ -30,6 +30,7 @@ int main(int argc, char **argv)
 		return (-1);
 	}
 	res = funcptr.f(a, b);
-	printf("%d %s %d = %d\n", a, argv[2], b, res);
+	/*printf("%d %s %d = %d\n", a, argv[2], b, res);*/
+	printf("%d\n", res);
 	return (0);
 }
