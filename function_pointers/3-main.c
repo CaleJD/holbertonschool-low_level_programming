@@ -29,8 +29,8 @@ int main(int argc, char **argv)
 	funcptr.f = get_op_func(argv[2]);
 	if (funcptr.f == NULL)
 	{
-		printf("ERROR: NULL\n");
-		return (-1);
+		printf("Error\n");
+		return (99);
 	}
 	res = funcptr.f(a, b);
 	/*printf("%d %s %d = %d\n", a, argv[2], b, res);*/
