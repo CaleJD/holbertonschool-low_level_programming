@@ -4,7 +4,7 @@
  * main - a calculator function
  * @argc: checks number of arguments
  * @argv: arguments given from the user
- * Return: 0 if success, -1 if fail
+ * Return: 0 if success
  */
 int main(int argc, char **argv)
 {
