@@ -14,7 +14,10 @@ int main(int argc, char **argv)
 	int res;
 
 	if (argc != 4)
-		return (-1);
+	{
+		printf("Error\n");
+		return (98);
+	}
 	a = atoi(argv[1]);
 	b = atoi(argv[3]);
 	if ((strcmp(argv[2], "/") == 0 || strcmp(argv[2], "%") == 0)
