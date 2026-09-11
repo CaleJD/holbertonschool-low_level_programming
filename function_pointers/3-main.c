@@ -21,7 +21,7 @@ int main(int argc, char **argv)
 	a = atoi(argv[1]);
 	b = atoi(argv[3]);
 	if ((strcmp(argv[2], "/") == 0 || strcmp(argv[2], "%") == 0)
-	 	&& b == 0)
+		&& b == 0)
 	{
 		printf("Error\n");
 		return (100);
@@ -33,7 +33,6 @@ int main(int argc, char **argv)
 		return (99);
 	}
 	res = funcptr.f(a, b);
-	/*printf("%d %s %d = %d\n", a, argv[2], b, res);*/
 	printf("%d\n", res);
 	return (0);
 }
