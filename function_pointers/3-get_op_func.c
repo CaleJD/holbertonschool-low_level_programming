@@ -3,6 +3,7 @@
 /**
  * get_op_func - retrieves associated func pointer
  * @s: the operator to work with
+ * Return: pointer to correct func or NULL if fail
  */
 int (*get_op_func(char *s))(int, int)
 {
