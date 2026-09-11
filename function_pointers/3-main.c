@@ -23,8 +23,8 @@ int main(int argc, char **argv)
 	if ((strcmp(argv[2], "/") == 0 || strcmp(argv[2], "%") == 0)
 	 	&& b == 0)
 	{
-		printf("ERROR: CANNOT DIVIDE BY 0\n");
-		return (-1);
+		printf("Error\n");
+		return (100);
 	}
 	funcptr.f = get_op_func(argv[2]);
 	if (funcptr.f == NULL)
