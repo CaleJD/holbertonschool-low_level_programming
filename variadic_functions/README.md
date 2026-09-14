@@ -1,0 +1,1 @@
+This is my holberton practice for variadic functions
