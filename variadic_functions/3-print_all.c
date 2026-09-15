@@ -8,13 +8,11 @@
 void print_all(const char * const format, ...)
 {
 	va_list strs;
-	unsigned int i;
+	unsigned int i = 0;
 	char *string;
-	int printed;
+	int printed = 0;
 
-	printed = 0;
 	va_start(strs, format);
-	i = 0;
 	if (format == NULL)
 	{
 		printf("\n");
@@ -49,6 +47,4 @@ void print_all(const char * const format, ...)
 		}
 		i++;
 	}
-	printf("\n");
-	va_end(strs);
 }
