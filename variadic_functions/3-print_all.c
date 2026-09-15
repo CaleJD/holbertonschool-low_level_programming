@@ -10,7 +10,6 @@ void print_all(const char * const format, ...)
 	va_list strs;
 	unsigned int i = 0;
 	char *string;
-	int printed = 0;
 
 	va_start(strs, format);
 	if (format == NULL)
@@ -20,6 +19,7 @@ void print_all(const char * const format, ...)
 	}
 	while (format[i] != '\0')
 	{
+	int printed = 0;
 		switch (format[i])
 		{
 			case 'c':
@@ -41,10 +41,7 @@ void print_all(const char * const format, ...)
 				break;
 		}
 		if (format[i + 1] != '\0' && printed == 1)
-		{
 			printf(", ");
-			printed = 0;
-		}
 		i++;
 	}
 }
