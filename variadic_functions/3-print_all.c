@@ -49,8 +49,3 @@ void print_all(const char * const format, ...)
 	printf("\n");
 	va_end(strs);
 }
-
-void main(void)
-{
-	print_all("mnbvfqcepolsbxzi", 3.14435, 'H', "#Cisfun", 0);
-}
