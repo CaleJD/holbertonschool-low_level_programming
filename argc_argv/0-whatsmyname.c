@@ -5,7 +5,9 @@
  * @argc: number of args
  * @argv: list of args
  */
-void print(char *argv[])
+int main(int argc, char *argv[])
 {
+	(void)argc;
 	printf("%s", argv[0]);
+	return 0;
 }
