@@ -35,7 +35,7 @@ void print_all(const char * const format, ...)
 				printf("%s", va_arg(strs, char*));
 				break;
 		}
-		if (format[i + 1] != '\n')
+		if (format[(i + 1)] != '\n')
 			printf(", ");
 		i++;
 	}
