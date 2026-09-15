@@ -22,13 +22,13 @@ void print_all(const char * const format, ...)
 				string = va_arg(strs, char*);
 				if (string == NULL)
 					printf("(nil)");
-				printf("%s", va_arg(strs, char*));
+				printf("%c", va_arg(strs, char*));
 				break;
 			case 'i':
-				printf("%d", va_arg(strs, float*));
+				printf("%d", va_arg(strs, int));
 				break;
 			case 'f':
-				printf("%d", va_arg(strs, int));
+				printf("%f", va_arg(strs, float*));
 				break;
 			case 's':
 				printf("%s", va_arg(strs, char*));
